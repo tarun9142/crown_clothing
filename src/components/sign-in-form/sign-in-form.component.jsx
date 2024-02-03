@@ -6,7 +6,7 @@ import {
 
 import "./sign-in-form.styles.scss"
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPES } from "../button/button.component";
 const defaultFormFields = {
   email: "",
   password: "",
@@ -68,7 +68,7 @@ const SignInForm = () => {
         />
         <div className="buttons-container">
           <Button  type="submit">Sign In</Button>
-          <Button type="button" buttonType='google' onClick={signinWithGoogle}>google sign in</Button>
+          <Button type="button" buttonType={BUTTON_TYPES.google} onClick={signinWithGoogle}>google sign in</Button>
         </div>
       </form>
     </div>
